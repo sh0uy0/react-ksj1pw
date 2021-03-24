@@ -2,24 +2,22 @@ import React from "react";
 import { avatar } from './data';
 
 export default function Item({item}) {
-
   return(
     <li>
       <figure>
           <img src={avatar()} alt='alt text' />
-          <figcaption><h3>{item.company.catchPhrase}</h3></figcaption>
+          <figcaption><h3>{item.user.username}</h3></figcaption>
       </figure>
-      <div></div>
       <p> 
-        <span>{item.name}</span>
+        <span>{item.user.name}</span>
       </p>
       <p> 
-        <span>{item.email}</span>
+        <span>{item.user.email}</span>
       </p>
       <p> 
-        <span>{item.phone}</span>
+        <span>{item.user.phone}</span>
       </p>
-      <a href='#'>Visit Website</a>
+      <a href='#'>Visit</a>
     </li>
   )
 }

@@ -8,6 +8,10 @@
   padding: 1rem;
 }
 
+li {
+  list-style: none;
+}
+
 /* column styles */
 
 .column__list {
