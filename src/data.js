@@ -1,23 +1,24 @@
 import Faker from 'faker';
 
-function createPost(number){
-  const data = Array(number).fill({
+function createPost(number = 1){
+  return Array(number).fill(null).map(() => ({
     title: Faker.lorem.sentence(),
     body: Faker.lorem.paragraph()
-  })
-
-  return data;
+  }));
 }
 
-function createComment(number){
-  const data = Array(number).fill(Faker.lorem.sentence())
-  return data;
+console.log(createPost(3));
+
+function createComment(number = 1){
+  return Array(number).fill(null).map(() => Faker.lorem.sentence());
 }
 
-export default function data(number){
-  const data = Array(number).fill({
+export function avatar(){
+  return Faker.image.image()
+}
+
+export default function data(number = 1){
+  return Array(number).fill(null).map(() => ( {
     user: Faker.helpers.createCard(),
-    posts: createPost(number),
-    comments: createComment(number)
-  })
+  }));
 }

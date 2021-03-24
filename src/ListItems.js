@@ -2,12 +2,7 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 import Item from './Item';
 
-// async function getItems(){
-   // console.log('Recieved data: ', data);
-// }
-
 export default function ListItems() {
-  // const data2 = getItems();
 const [items, setItems] = useState({
   data: []
 });
@@ -21,9 +16,9 @@ const getItems = () => {
         .then(response => {
         const data = response.data;
         setItems({ data });
-        // console.log('Recieved data: ', data);
+        // console.log('Recieved data: ', Data());
         }).catch(error => console.error(error))
-}
+        }
 return (
         <section className="breweries" id="breweries">
           <ul>
