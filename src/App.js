@@ -18,10 +18,18 @@ export default function App() {
     }, [])
 
   const resetData = () => {
-    const number = +prompt('Set Number');
+    setItems({});
+    const number = +prompt('Set Number', 3);
     const data = Data(number);
     setItems({ data });
   }
+
+  const addData = data => {
+    setItems({
+      ...items.data,
+      data
+    })
+  } 
 
   const getItems = () => {
     //  axios.get('https://jsonplaceholder.typicode.com/users')
@@ -37,7 +45,7 @@ export default function App() {
   return (
     <div>
       <main className="wrapper">
-        <Banner handleClick={resetData} />
+        <Banner handleClick={resetData} addData={addData} />
         <ListItems data={items} />
       </main>
       <Footer />

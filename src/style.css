@@ -16,17 +16,22 @@ html {
   scroll-behavior: smooth;
 }
 
-button {
+a, button {
   background-color: goldenrod;
-  padding: 1em;
+  text-decoration: none;
   color: white;
-  border: 0;
   border-radius: .25rem;
   text-align: center;
+  display: inline-block;
   transition: all .3s;
 }
 
-button:hover {
+button {
+  padding: .75em;
+  border: none;
+}
+
+a:hover, button:hover {
   opacity: .6;
 }
 
