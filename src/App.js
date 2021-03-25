@@ -18,17 +18,16 @@ export default function App() {
     }, [])
 
   const resetData = () => {
-    setItems({});
     const number = +prompt('Set Number', 3);
     const data = Data(number);
     setItems({ data });
   }
 
   const addData = data => {
-    setItems({
-      ...items.data,
-      data
-    })
+    // setItems({
+    //   ...items.data,
+    //   data
+    // })
   } 
 
   const getItems = () => {
@@ -38,7 +37,8 @@ export default function App() {
     //       setItems({ data });
     //       // console.log('Recieved data: ', Data());
     //       }).catch(error => console.error(error))
-      const data = Data(6);
+      const number = +prompt('Set Number', 3);
+      const data = Data(number);
       // console.log('Recieved data: ', data);
       setItems({ data });
     }
