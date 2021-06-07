@@ -9,5 +9,5 @@ return (
             {data.data.map(obj => (<Item key={obj.user.phone} item={obj}/>))}
           </ul>
         </section>
-  )
+    )
 }
